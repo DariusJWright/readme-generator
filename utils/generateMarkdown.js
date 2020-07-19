@@ -1,12 +1,3 @@
-const generateContributing = contributingText => {
-  if (!contributingText) {
-      return '';
-  }
-  return `
-      ${contributingText}
-  `
-}
-
 // function to generate markdown for README
 const generateMarkdown = data => {
   return `
@@ -33,7 +24,7 @@ const generateMarkdown = data => {
   ${data.license}
 
   ##Contributing
-  ${generateContributing(contributing)}
+  ${data.contributing}
 
   ##Tests
   ${data.tests}

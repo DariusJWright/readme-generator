@@ -3,11 +3,10 @@ const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
 
-
 // function to initialize program
 const init = () => {
     // array of questions for user
-    const questions = inquirer.prompt([
+    return inquirer.prompt([
         {
             type: 'input',
             name: 'title',
@@ -35,7 +34,8 @@ const init = () => {
         {
             type: 'input',
             name: 'contributing',
-            message: 'Enter contributing instructions if any.'
+            message: 'Enter contributing instructions.'
+            validate: projectContributing => projectContributing ? true : console.log('Please enter contributing instructions.')
         },
         {
             type: 'list',
@@ -62,18 +62,22 @@ const init = () => {
             validate: projectEmail => projectEmail ? true : console.log('Please provide your email address.')
         }
     ]);
-    return questions;
-}
+};
 
-// function to write README file
+//function to write README file
 const writeToFile = data => {
-    fs.writeToFile('./dist/README.md', generateMarkdown(data));
-}
+    fs.writeFile('./dist/README.md', generateMarkdown(data), err => {
+        if (err) {
+            throw new Error(err);
+        }
+    }
+)};
+
+
 
 // function call to initialize program
-init()
-    .then(writeToFile(questions))
-    .then(writeFileResponse => console.log(writeFileResponse))
-    .catch(err => {
-        console.log(err);
-    });
+init().then(answers => writeToFile(answers));
+    
+    
+    
+    
