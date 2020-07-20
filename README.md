@@ -4,7 +4,7 @@
 A command line application that will generate a **README.MD** file based on user input.
 
 ## Installation
-Clone the repository and make sure you have **Node.js** installed.  Then simply run index.js and answer the questions.
+Clone the repository and make sure you have **Node.js** installed.  Then simply navigate to the root directory in the command line, and type "node index.js" and answer the questions.
 
 ## Usage
 Designed for anyone looking to create a professional README file.
