@@ -76,7 +76,7 @@ const writeToFile = data => {
 
 
 // function call to initialize program
-init().then(answers => writeToFile(answers));
+init().then(answers => writeToFile(answers)).then(() => console.log("Check the dist folder to find your new README!"));
     
     
     
