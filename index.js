@@ -34,7 +34,7 @@ const init = () => {
         {
             type: 'input',
             name: 'contributing',
-            message: 'Enter contributing instructions.'
+            message: 'Enter contributing instructions.',
             validate: projectContributing => projectContributing ? true : console.log('Please enter contributing instructions.')
         },
         {

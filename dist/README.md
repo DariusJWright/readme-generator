@@ -1,10 +1,10 @@
 
-  #g
+  # g
   
-  ##Description
+  ## Description
   g
 
-  ##Table of Contents
+  ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
   * [License](#license)
@@ -12,22 +12,20 @@
   * [Tests](#tests)
   * [Questions](#questions)
   
-  ##Installation
+  ## Installation
   g
 
-  ##Usage
+  ## Usage
   g
 
-  ##License
+  ## License
   MIT
 
-  ##Contributing
-  
-      g
-  
-
-  ##Tests
+  ## Contributing
   g
 
-  ##Questions
+  ## Tests
+  g
+
+  ## Questions
   For questions, please contact me at: **github.com/g**, or via email at: **g**.
